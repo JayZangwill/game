@@ -63,7 +63,7 @@
             die = true;
             if (!sessionStorage.getItem('achievements') || sessionStorage.getItem('achievements') < time) {
                 sessionStorage.setItem('achievements', time.toFixed(2));
-                success.querySelector('p').innerHTML = `新纪录${time.toFixed(2)}s`;
+                success.querySelector('p').innerHTML = `${time.toFixed(2)}s`;
                 success.style.display = "block";
             } else {
                 fail.querySelector('h3').innerHTML = `${time.toFixed(2)}s`;
