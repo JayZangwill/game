@@ -81,7 +81,7 @@
         if (die) {
             return;
         }
-        if (y <= -winHeight) {
+        if (y <= -winHeight / 4) {
             die = true;
             fail.querySelector('h3').innerHTML = '您已修仙成功';
             fail.querySelector('p').innerHTML = '由于您过于渴望力量，已经飞出宇宙以外';
