@@ -81,6 +81,13 @@
         if (die) {
             return;
         }
+        if (y <= -winHeight) {
+            die = true;
+            fail.querySelector('h3').innerHTML = '您已修仙成功';
+            fail.querySelector('p').innerHTML = '由于您过于渴望力量，已经飞出宇宙以外';
+            fail.style.display = "block";
+            clearInterval(timer);
+        }
         ctx.clearRect(50, y, 48, 48);
         if (y > orgin - 10 && dist !== 20) {
             //防止图片下落过头让图片归位
